@@ -1,0 +1,187 @@
+                            /* Mobile  */
+/* @ */
+.cabecalho__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* fica determidado item para que ao rolar a tela o item permaneça na vista */
+    position: fixed;
+    top: 0;
+}
+
+.cabecalho__pesquisar__item {
+    display: none;
+}
+
+
+.menu__container {
+    position: fixed;
+    bottom: 0%;
+    height: 74px;
+    width: 100%;
+/*     align-items: center; aqui nao vai funcionae
+ */}
+
+.menu__lista {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+   
+}
+ 
+.menu__lista li {
+    align-self: center;
+/* precisa ser diretamente na Li se não, nao funciona*/
+
+}
+.menu__itens {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu__lista:nth-child(2),
+.menu__lista:nth-child(3),
+.menu__lista:nth-child(4) {
+    display: none;
+    }
+
+    .videos__item {
+        height: 303px;
+        width: 280px;
+        flex-grow: 1;
+    }
+    
+    .videos__container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+}
+
+                                /* table */
+
+@media (min-width:834px) {
+    .cabecalho__container {
+        padding: 0 25px 0 19px;
+    }
+    .cabecalho__pesquisar__item {
+        display: block;
+    }
+    .rodape__container {
+        justify-content: space-between;
+    }
+
+    .menu__container {
+        position: fixed;
+        bottom: -9.5%;
+        width: 80px;
+        height: 100%;
+        text-align: center;
+    }
+    .menu__lista {
+        position: relative;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 40px;
+        padding-top: 25px;
+    }
+}
+/* linha 10/17 configura o aparecimento e desaparecimento de um item dependendo do dispositivo */
+
+/* parte superior  */
+.superior__secao__container {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    /* para o texto em um botão por exemplo não quebrar para baixo */
+    overflow: scroll;
+/* por incrivel que parivel, isso é uma barra de rolagem */
+    gap: 15px;
+}
+
+.rodape__container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* flex-floe: wrap; é a mesma coisa que o código acima 
+     */
+}
+.videos__item {
+    height: 303px;
+    width: 280px;
+    
+}
+
+.videos__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+}
+
+
+                                        /* DESKTOP  */
+
+
+@media (min-width:1440px) {
+    .menu__container {
+        position: fixed;
+        width: 14.9em;
+        overflow: scroll;
+        padding: 0 0 10em 1.5em;
+        justify-content: center;
+        
+        
+    }
+        .menu__lista:nth-child(2),
+        .menu__lista:nth-child(3),
+        .menu__lista:nth-child(4) {
+        display: flex;
+    }
+        .menu__lista {
+            height: auto;
+            gap: 1em; /*  aqui juntou, entendi foi nda, acho que estava com um espaçamento superior a isso, quando apliquei o gap diminuiu  */
+    
+        }
+    .menu__itens {
+        flex-direction: row;
+        align-items: center;
+        gap: 1em;/* aqui separou  */
+        align-items: center
+    };
+
+    .menu__lista:nth-child(3) {
+        flex-direction: column-reverse;
+    }
+
+    .menu__lista:nth-child(3) {
+        flex-direction: column-reverse;
+    }
+    .premiun {
+        order: 1;
+    }
+    .filmes {
+        order: 2;
+    }
+    .jogos {
+        order: 3;
+    }
+     .maispagina {
+        order: 4;
+    }
+
+
+.videos__item {
+    height: 303px;
+    width: 280px;
+    
+}
+.videos__item:last-of-type {
+flex-grow: 0;}
+.videos__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+}
